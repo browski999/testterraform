@@ -10,3 +10,11 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+resource "azurerm_resource_group" "rg" {
+  name     = "bobresourcegroup70"
+  location = "UK South"
+  tags = {
+    environment = "dev"
+  }
+}
